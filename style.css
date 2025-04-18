@@ -1,0 +1,182 @@
+/* --- Neo-Brutalist Style --- */
+
+/* Basic Reset & Body Style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* Base font size */
+}
+
+body {
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif; /* Common, sharp sans-serif */
+  line-height: 1.5;
+  background-color: #f0f0f0; /* Off-white/light grey background */
+  color: #111; /* Near-black text */
+  padding: 2rem 1rem; /* Use rem for scalable padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
+  font-weight: 700; /* Bold */
+  text-transform: uppercase; /* UPPERCASE */
+  color: #111;
+  background-color: #ffdd00; /* Bright yellow background block */
+  padding: 0.5rem 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  border: 3px solid #111; /* Solid black border */
+  box-shadow: 6px 6px 0px #aaaaaa; /* Hard grey shadow */
+  display: inline-block; /* Fit content width */
+}
+
+h2 {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #111; /* Thick underline */
+  padding-bottom: 0.5rem;
+  text-align: left; /* Align section titles left */
+  width: 100%; /* Take full width */
+}
+
+/* Converter Section Styling */
+.converter-section {
+  background-color: #ffffff; /* White background for sections */
+  border: 3px solid #111; /* Strong black border */
+  border-radius: 0; /* Sharp corners */
+  padding: 1.5rem; /* Use rem */
+  margin-bottom: 2.5rem;
+  box-shadow: 8px 8px 0px #111; /* Hard black shadow, more offset */
+  width: 100%;
+  max-width: 700px; /* Max width */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* Make items in a row same height */
+  justify-content: space-between;
+  gap: 1.5rem; /* Space between items */
+}
+
+/* Input and Output Group Styling */
+.input-group,
+.output-group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow groups to grow */
+  flex-basis: calc(50% - 1.5rem); /* Aim for two columns, accounting for gap */
+  min-width: 180px; /* Minimum width before wrapping */
+}
+
+label {
+  font-weight: 700; /* Bold labels */
+  margin-bottom: 0.5rem;
+  color: #111;
+  font-size: 0.9rem;
+  text-transform: uppercase; /* Uppercase labels */
+}
+
+input[type="number"] {
+  padding: 0.8rem;
+  border: 3px solid #111; /* Thick black border */
+  border-radius: 0; /* Sharp corners */
+  font-size: 1rem;
+  width: 100%;
+  background-color: #ffffff;
+  color: #111;
+  appearance: none; /* Remove default styles */
+  -webkit-appearance: none;
+  -moz-appearance: textfield; /* For Firefox */
+}
+
+/* Remove spinners from number inputs (optional but common in brutalism) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none; /* Remove default outline */
+  border-color: #005eff; /* Bright blue border on focus */
+  background-color: #e6f0ff; /* Slight blue background on focus */
+  box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
+}
+
+/* Style for the output spans in the number system */
+.output-group span {
+  background-color: #e0e0e0; /* Light grey background for output */
+  padding: 0.8rem;
+  border: 3px solid #111;
+  border-radius: 0;
+  font-size: 1rem;
+  min-height: calc(
+    1rem + 1.6rem + 6px
+  ); /* Match input height (font + padding + border) */
+  display: flex; /* Use flex to center content vertically */
+  align-items: center;
+  width: 100%;
+  color: #111;
+  font-weight: 700; /* Bold output */
+}
+
+.equals {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center;
+  flex-basis: 5%;
+  min-width: 30px; /* Ensure some space */
+  text-align: center;
+  align-self: center; /* Center itself vertically in the flex row */
+  padding-top: 1.5rem; /* Align roughly with input fields */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 650px) {
+  body {
+    padding: 1.5rem 0.5rem;
+  }
+
+  h1 {
+    box-shadow: 4px 4px 0px #aaaaaa;
+  }
+
+  .converter-section {
+    flex-direction: column; /* Stack groups vertically */
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 0px #111; /* Slightly smaller shadow */
+  }
+
+  .input-group,
+  .output-group {
+    flex-basis: 100%; /* Each group takes full width */
+    min-width: unset; /* Remove min-width */
+  }
+
+  .equals {
+    display: none; /* Hide equals sign on small screens for cleaner stacking */
+    /* Or alternatively, make it a full-width separator: */
+    /*
+       display: block;
+       width: 100%;
+       text-align: center;
+       padding: 0.5rem 0;
+       margin: 0.5rem 0;
+       font-size: 1.5rem;
+       border-top: 3px solid #ccc;
+       border-bottom: 3px solid #ccc;
+       */
+  }
+}

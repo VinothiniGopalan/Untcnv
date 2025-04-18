@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Unit Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Useful Unit Converter</h1>
+
+    <!-- Length Conversion -->
+    <div class="converter-section">
+      <h2>Length</h2>
+      <div class="input-group">
+        <label for="km">Kilometers (km):</label>
+        <input type="number" id="km" placeholder="Enter km" />
+      </div>
+      <div class="equals">=</div>
+      <div class="input-group">
+        <label for="m">Meters (m):</label>
+        <input type="number" id="m" placeholder="Enter m" />
+      </div>
+      <div class="input-group">
+        <label for="miles">Miles:</label>
+        <input type="number" id="miles" placeholder="Result in miles" />
+      </div>
+    </div>
+
+    <!-- Weight Conversion -->
+    <div class="converter-section">
+      <h2>Weight / Mass</h2>
+      <div class="input-group">
+        <label for="kg">Kilograms (kg):</label>
+        <input type="number" id="kg" placeholder="Enter kg" />
+      </div>
+      <div class="equals">=</div>
+      <div class="input-group">
+        <label for="g">Grams (g):</label>
+        <input type="number" id="g" placeholder="Enter g" />
+      </div>
+      <div class="input-group">
+        <label for="pounds">Pounds (lb):</label>
+        <input type="number" id="pounds" placeholder="Result in pounds" />
+      </div>
+    </div>
+
+    <!-- Temperature Conversion -->
+    <div class="converter-section">
+      <h2>Temperature</h2>
+      <div class="input-group">
+        <label for="celsius">Celsius (°C):</label>
+        <input type="number" id="celsius" placeholder="Enter °C" />
+      </div>
+      <div class="equals">=</div>
+      <div class="input-group">
+        <label for="fahrenheit">Fahrenheit (°F):</label>
+        <input type="number" id="fahrenheit" placeholder="Enter °F" />
+      </div>
+    </div>
+
+    <!-- Indian Number System -->
+    <div class="converter-section">
+      <h2>Indian Number System</h2>
+      <div class="input-group">
+        <label for="number">Number:</label>
+        <input type="number" id="number" placeholder="Enter number" />
+      </div>
+      <div class="equals">=</div>
+      <div class="output-group">
+        <label>Lakhs:</label>
+        <span id="lakhs">0</span>
+      </div>
+      <div class="output-group">
+        <label>Crores:</label>
+        <span id="crores">0</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
